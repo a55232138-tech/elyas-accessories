@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>لوازم جانبی الیاس ⚡</title>
+
+  <meta name="description"
+        content="فروشگاه لوازم جانبی الیاس؛ انواع لوازم جانبی موبایل با کیفیت مناسب.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top right, #5b21b6 0%, transparent 35%),
+        radial-gradient(circle at bottom left, #0891b2 0%, transparent 30%),
+        #080812;
+      color: white;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* نوار بالا */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8, 8, 18, 0.92);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #22d3ee, #a855f7, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 10px 15px;
+      border-radius: 12px;
+      color: #ddd;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.1);
+      color: white;
+    }
+
+    /* صفحه اصلی */
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      min-height: 75vh;
+      padding: 80px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-box {
+      max-width: 850px;
+      padding: 45px 25px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 10px 18px;
+      border: 1px solid #22d3ee;
+      border-radius: 30px;
+      color: #67e8f9;
+      background: rgba(34,211,238,0.08);
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 8vw, 75px);
+      line-height: 1.2;
+      margin-bottom: 25px;
+      background: linear-gradient(
+        90deg,
+        #ffffff,
+        #22d3ee,
+        #a855f7,
+        #f472b6
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: #cbd5e1;
+      font-size: 19px;
+      line-height: 2;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 23px;
+      border-radius: 14px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .primary {
+      background: linear-gradient(135deg, #06b6d4, #7c3aed);
+      box-shadow: 0 10px 30px rgba(124,58,237,0.3);
+    }
+
+    .secondary {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    /* بخش‌ها */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+
+    .section-title span {
+      color: #22d3ee;
+    }
+
+    /* کارت‌ها */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 22px;
+      padding: 30px 20px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: #22d3ee;
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #b8c0cc;
+      line-height: 1.9;
+    }
+
+    /* تماس */
+    .contact-box {
+      background: linear-gradient(
+        135deg,
+        rgba(34,211,238,0.1),
+        rgba(168,85,247,0.12)
+      );
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 25px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .phone {
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 25px;
+      color: #67e8f9;
+      direction: ltr;
+    }
+
+    /* کانال */
+    .telegram {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 25px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #0088cc, #229ed9);
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .telegram:hover {
+      transform: scale(1.04);
+    }
+
+    /* پایین سایت */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      padding: 30px 20px;
+      color: #94a3b8;
+      background: rgba(0,0,0,0.25);
+    }
+
+    /* موبایل */
+    @media (max-width: 700px) {
+      .nav {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 65vh;
+        padding-top: 50px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 50px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- منوی سایت -->
+  <header>
+    <div class="nav">
+
+      <a href="#home" class="logo">
+        ⚡ لوازم جانبی الیاس
+      </a>
+
+      <nav>
+        <a href="#home">خانه</a>
+        <a href="#contact">تماس با ما</a>
+        <a href="#channel">کانال اطلاع‌رسانی</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- خانه -->
+  <main id="home">
+
+    <div class="hero">
+      <div class="hero-box">
+
+        <div class="badge">
+          🔥 فروشگاه لوازم جانبی
+        </div>
+
+        <h1>
+          لوازم جانبی<br>
+          الیاس
+        </h1>
+
+        <p>
+          جدیدترین و کاربردی‌ترین لوازم جانبی موبایل
+          با کیفیت مناسب و قیمت خوب
+        </p>
+
+        <div class="buttons">
+
+          <a href="#contact" class="btn primary">
+            📞 تماس با ما
+          </a>
+
+          <a href="#channel" class="btn secondary">
+            📢 کانال اطلاع‌رسانی
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- امکانات -->
+    <section>
+
+      <h2 class="section-title">
+        چرا <span>الیاس؟</span>
+      </h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="icon">🚀</div>
+          <h3>محصولات کاربردی</h3>
+          <p>
+            انواع لوازم جانبی مناسب برای استفاده روزمره
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">✨</div>
+          <h3>کیفیت مناسب</h3>
+          <p>
+            تلاش برای ارائه محصولات با کیفیت و کاربردی
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎧</div>
+          <h3>پشتیبانی</h3>
+          <p>
+            برای دریافت اطلاعات بیشتر با ما تماس بگیرید
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- تماس -->
+    <section id="contact">
+
+      <h2 class="section-title">
+        تماس <span>با ما</span>
+      </h2>
+
+      <div class="contact-box">
+
+        <p>
+          برای دریافت اطلاعات محصولات و سفارش،
+          می‌توانید با ما تماس بگیرید.
+        </p>
+
+        <a
+          class="phone"
+          href="tel:09395508237">
+          📞 09395508237
+        </a>
+
+        <br>
+
+        <a
+          class="btn primary"
+          href="tel:09395508237">
+          تماس تلفنی
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- کانال -->
+    <section id="channel">
+
+      <h2 class="section-title">
+        کانال <span>اطلاع‌رسانی</span> 📢
+      </h2>
+
+      <div class="contact-box">
+
+        <p>
+          برای اطلاع از محصولات و اخبار جدید،
+          وارد کانال اطلاع‌رسانی ما شوید.
+        </p>
+
+        <a
+          class="telegram"
+          href="https://t.me/MOD_SHOPS"
+          target="_blank"
+          rel="noopener noreferrer">
+          📲 ورود به کانال MOD_SHOPS
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- پایین سایت -->
+  <footer>
+
+    ⚡ لوازم جانبی الیاس
+
+    <br><br>
+
+    © تمامی حقوق محفوظ است.
+
+  </footer>
+
+</body>
+  </html>
